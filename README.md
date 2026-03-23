@@ -7,4 +7,4 @@ kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.pas
 AGENT_POD=$(kubectl get pods -l app=sre-agent -o jsonpath='{.items[0].metadata.name}') 
 kubectl logs -f $AGENT_POD #查看系统日志 --之后可以写成shell脚本，方便演示
 
-
+shell脚本可以快速查询当前绑定的ArgoCD接口和初始密码
